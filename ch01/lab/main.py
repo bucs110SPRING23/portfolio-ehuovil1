@@ -14,4 +14,5 @@ cost_per_class = cost_per_week / classes_per_week
 print(cost_per_class, type(cost_per_class))
 print("The cost per class is $" + str(cost_per_class))
 List = ("Hockey", "Soccer", "Basketball", "Tennis", "Football")
-print(random.choice(List))
+RandomChoice = random.choice(List)
+print(RandomChoice)
