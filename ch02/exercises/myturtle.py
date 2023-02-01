@@ -1,15 +1,16 @@
 import turtle
-turtle.shape("turtle")
-turtle.color("purple")
+bob = turtle.Turtle()
+bob.shape("turtle")
+bob.color("purple")
 for i in range(4):
-    turtle.forward(50)
-    turtle.left(90)
+    bob.forward(50)
+    bob.left(90)
 
-turtle.penup()
-turtle.goto(100,50)
-turtle.color("red")
-turtle.pendown()
+bob.penup()
+bob.goto(100,50)
+bob.color("red")
+bob.pendown()
 for i in range(4):
-    turtle.forward(50)
-    turtle.left(90)
+    bob.forward(50)
+    bob.left(90)
 turtle.exitonclick()
