@@ -1,4 +1,5 @@
 import pygame
+pygame.init()
 display = pygame.display.set_mode((600, 400))
 pygame.draw.circle(display, "white", [300, 100], 40)
 pygame.display.update()
