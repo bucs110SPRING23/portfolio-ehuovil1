@@ -104,8 +104,6 @@ for i in range(10):
     else:
         pygame.draw.circle(screen, "black", [xCord, yCord], 5)
         pygame.display.update()   
-print(green)
-print(white)
 if green > white:
     winner = "Green Wins!"
     print
