@@ -1,27 +1,30 @@
 
-
-#num1 = int(input("Enter number "))
-
-def multiplication(num1, num3):
-    product=0
-    for i in range (num3): 
-        product = product + num1 
-    print(product)     
-print(multiplication(2, 3))
-#print(multiplication())
+def multiply(x, y):
+    accumulator = 0
+    for _ in range(y):
+        accumulator = accumulator + x
+    return accumulator
 
 
+def exponent(x, y):
+    accumulator = 1
+    for _ in range(y):
+        accumulator = accumulator * x
+    return accumulator
 
-def exponent(factor, num2):
-    product = 0
-    for i in range (num2):
-        product = product + factor * factor
-    print(product)
-print(exponent(3, 3))
-
-def square(a):
-    squared = a * a
-    print(squared)
-print(square(5))
+def squares(x):
+    return multiply(x, x)
 
 
+
+def main():
+    x = int(input("Enter a number: "))
+    y = int(input("Enter another number: "))
+    result = multiply(x, y)
+    print(result)
+    result = exponent(x, y)
+    print(result)
+    result = squares(x)
+    print(result)
+
+main()
