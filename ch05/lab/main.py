@@ -27,6 +27,15 @@ pygame.display.update()
 pygame.draw.lines(screen, "white", False, list(threenp1range(100).items()))
 pygame.display.update()
 
+new_display = pygame.transform.flip(display, False, True)
+width, height = new_display.get_size()
+new_display = pygame.transform.scale(new_display, (width * <factor>, height * <factor>))
+display.blit(new_display, (0, 0))
+
+
+
+
+
 running = True
 while running:
     for event in pygame.event.get():
