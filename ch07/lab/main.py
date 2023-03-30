@@ -1,5 +1,5 @@
-import Rectangle
-import Surface
+from Rectangle import Rectangle
+from Surface import Surface
 def main():
     r = Rectangle(10, 10, 10, 10)
     assert((r.x, r.y, r.height, r.width) == (10,10,10,10))
@@ -19,4 +19,4 @@ def main():
     assert s.image
     print("Test Complete!")
 
-
+main()
