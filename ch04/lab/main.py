@@ -1,9 +1,7 @@
-Ch04 lab
-
 import random
 import math
 import pygame
-
+import time
 
 ## 5. Your PART A code goes here
 #background
@@ -21,8 +19,6 @@ pygame.draw.line(display, "black", [250, 0], [250, 500])
 pygame.draw.line(display, "black", [0, 250], [500, 250])
 pygame.display.update()
 pygame.time.wait(200)
-
-
 
 rect_1 = pygame.Rect(90, 120, 120, 60)
 rect_2 = pygame.Rect(280, 120, 120, 60)
@@ -50,7 +46,6 @@ while True :
 
     button1_rect = pygame.Rect(90, 120, 120, 60)
     button2_rect = pygame.Rect(280, 120, 120, 60)
-
 
     for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -82,7 +77,7 @@ white = 0
 # PART B - complete part B here
 #distance_from_center = math.hypot(xCord - 250,yCord - 250)
 #if distance_from_center <= 250:
-    
+
 for i in range(10):
     xCord = random.randrange(0, 500)
     yCord = random.randrange(0, 500)
@@ -93,66 +88,5 @@ for i in range(10):
         green +=1
     else:
         pygame.draw.circle(screen, "black", [xCord, yCord], 5)
-        pygame.display.update()   
-
-for i in range(10):
-    xCord = random.randrange(0, 500)
-    yCord = random.randrange(0, 500)
-    distance_from_center = math.hypot(xCord - 250,yCord - 250)
-    if distance_from_center <= 250:
-        pygame.draw.circle(screen, "white", [xCord, yCord], 5)
         pygame.display.update()
-        white +=1
-    else:
-        pygame.draw.circle(screen, "black", [xCord, yCord], 5)
-        pygame.display.update()   
-if green > white:
-    winner = "Green Wins!"
-    print
-elif green < white:
-    winner = "White Wins!"
-else:
-    winner = "It's a Tie!"
-
-font = pygame.font.SysFont("arial", 40)
-text = font.render(winner, True, "Black")
-display.blit(text, (140, 40)) # where <x> and<y> are coordinates on screen
-pygame.display.update()
-
-if choice == "Green Wins" and green > white:
-    result = smallfont.render('You guessed correctly!' , True , "black")
-    display.blit(result, (180 , 120))
-    pygame.display.update()
-elif choice == "Green Wins" and green == white:
-    result = smallfont.render('You guessed incorrectly!' , True , "black")
-    display.blit(result, (180 , 120))
-    pygame.display.update()
-elif choice == "Green Wins" and green < white:
-    result = smallfont.render('You guessed incorrectly!' , True , "black")
-    display.blit(result, (180 , 120))
-    pygame.display.update()
-elif choice == "White Wins" and green > white:
-    result = smallfont.render('You guessed incorrectly!' , True , "black")
-    display.blit(result, (180 , 120))
-    pygame.display.update()
-elif choice == "White Wins" and green < white:
-    result = smallfont.render('You guessed correctly!' , True , "black")
-    display.blit(result, (180 , 120))
-    pygame.display.update()
-elif choice == "White Wins" and green == white:
-    result = smallfont.render('You guessed incorrectly!' , True , "black")
-    display.blit(result, (180 , 120))
-    pygame.display.update()
-
-    pygame.display.update()
-running = True
-while running:
-
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            running = False
-pygame.quit()
-
-
-
-
+    time.sleep(1) 
