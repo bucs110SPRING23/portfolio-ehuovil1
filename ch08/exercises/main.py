@@ -62,7 +62,7 @@ def main() -> None:
 num = 5
 print(f"The number is: {num")
 mynewnum = Num(5)
-print(f"The number is: {mynewnum}")
+print(f"The number is: {mynewnum}"))
 
 
 
