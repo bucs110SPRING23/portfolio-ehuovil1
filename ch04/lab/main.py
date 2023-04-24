@@ -89,4 +89,36 @@ for i in range(10):
     else:
         pygame.draw.circle(screen, "black", [xCord, yCord], 5)
         pygame.display.update()
-    time.sleep(1) 
+    time.sleep(.2)
+
+if choice == "Green Wins" and green > white:
+    result = smallfont.render('You guessed correctly!' , True , "black")
+    display.blit(result, (180 , 120))
+    pygame.display.update()
+    pygame.time.wait(1000)
+elif choice == "Green Wins" and green == white:
+    result = smallfont.render('You guessed incorrectly!' , True , "black")
+    display.blit(result, (180 , 120))
+    pygame.display.update()
+    pygame.time.wait(1000)
+elif choice == "Green Wins" and green < white:
+    result = smallfont.render('You guessed incorrectly!' , True , "black")
+    display.blit(result, (180 , 120))
+    pygame.display.update()
+    pygame.time.wait(1000)
+elif choice == "White Wins" and green > white:
+    result = smallfont.render('You guessed incorrectly!' , True , "black")
+    display.blit(result, (180 , 120))
+    pygame.display.update()
+    pygame.time.wait(1000)
+elif choice == "White Wins" and green < white:
+    result = smallfont.render('You guessed correctly!' , True , "black")
+    display.blit(result, (180 , 120))
+    pygame.display.update()
+    pygame.time.wait(1000)
+elif choice == "White Wins" and green == white:
+    result = smallfont.render('You guessed incorrectly!' , True , "black")
+    display.blit(result, (180 , 120))
+    pygame.display.update()
+    pygame.time.wait(1000)
+ 
