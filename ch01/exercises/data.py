@@ -1,0 +1,11 @@
+print(10 * 5)
+print(10 ** 2)
+print(15 / 10)
+print(15 // 10)
+print(-15 // 10)
+print(15 % 10)
+print(10 % 15)
+print(10 % 10)
+print(0 % 10)
+print(10 / 15)
+# The last answer never cuts off the decimal due to it being a repeating decimal, so it keeps printing out "6's"
