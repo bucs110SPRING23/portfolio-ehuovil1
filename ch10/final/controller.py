@@ -1,6 +1,3 @@
-import pygame
-import requests
-#import IqAir
 from IqAir import IqAir
 import IpBase
 
@@ -10,10 +7,15 @@ class Controller():
         self.ip = IpBase.IpBase()
         self.air = IqAir()
 
+    def __str__(self):
+        return f'Controller({self.ip}, {self.air})'
 
     def main(self):
-        self.air.get()
         cords = self.ip.get()
-        self.ip.latlong(cords)
-    
+        latlong = self.ip.latlong(cords)
+        lat = latlong[0]
+        long = latlong[1]
+        response = self.air.get(lat, long)
+        self.air.windcity(response)
+
 
